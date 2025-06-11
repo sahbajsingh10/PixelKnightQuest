@@ -38,7 +38,7 @@ public class GridMovement : MonoBehaviour
             if (!Physics2D.OverlapCircle(newPos, 0.1f, obstacleLayer))
             {
                 StartCoroutine(Move(newPos));
-                // Trigger animation (you’ll need to set up parameters on your Animator)
+                // Trigger animation (need to set up parameters on your Animator)
                 animator.SetFloat("MoveX", dir.x);
                 animator.SetFloat("MoveY", dir.y);
                 animator.SetTrigger("StartMoving");
@@ -50,7 +50,7 @@ public class GridMovement : MonoBehaviour
     {
         isMoving = true;
         float elapsed = 0f;
-        float duration = tileSize / moveSpeed;  // e.g. 1/10 = 0.1 s
+        float duration = tileSize / moveSpeed;  
 
         Vector3 start = transform.position;
         while (elapsed < duration)
